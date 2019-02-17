@@ -37,7 +37,5 @@ object Form1: TForm1
     RowCount = 1
     FixedRows = 0
     TabOrder = 1
-    ExplicitWidth = 737
-    ExplicitHeight = 352
   end
 end

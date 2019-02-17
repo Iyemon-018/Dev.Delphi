@@ -3,7 +3,8 @@ program VlcExample01;
 uses
   Vcl.Forms,
   MainForm in 'MainForm.pas' {Form1},
-  UserInformationInputForm in 'UserInformationInputForm.pas' {UserInfoInputForm};
+  UserInformationInputForm in 'UserInformationInputForm.pas' {UserInfoInputForm},
+  UserInformation in 'UserInformation.pas';
 
 {$R *.res}
 
