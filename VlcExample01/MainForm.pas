@@ -4,13 +4,15 @@ interface
 
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes,
-  Vcl.Graphics, Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.Grids, Vcl.StdCtrls;
+  Vcl.Graphics, Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.Grids, Vcl.StdCtrls
+  , UserInformationInputForm;
 
 type
   TForm1 = class(TForm)
     btnCreate: TButton;
     stgUsers: TStringGrid;
     procedure FormCreate(Sender: TObject);
+    procedure btnCreateClick(Sender: TObject);
   private
     { Private 宣言 }
   public
@@ -37,6 +39,18 @@ var
 implementation
 
 {$R *.dfm}
+
+/// <summary>
+/// 新規作成ボタンをクリックした際のイベントハンドラです。
+/// </summary>
+procedure TForm1.btnCreateClick(Sender: TObject);
+var
+  UserInfoForm: TUserInfoInputForm;
+begin
+  // TODO
+  UserInfoForm := TUserInfoInputForm.Create(Form1);
+  UserInfoForm.ShowModal;
+end;
 
 procedure TForm1.FormCreate(Sender: TObject);
 var
